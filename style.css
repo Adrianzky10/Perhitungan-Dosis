@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Background gradien ungu → pink */
+    background: linear-gradient(135deg, #0040ff65, #e100ff71, #ff4fc48c);
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+}
+
+/* Animasi gradient */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ---------------------------------------------------
+   FORM GLASSMORPHISM (LIQUID GLASS)
+   --------------------------------------------------- */
+form {
+    width: 420px;
+    padding: 30px 35px;
+    
+    /* efek kaca */
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    /* border kaca */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    /* shadow lembut */
+    box-shadow: 
+        0 0 15px rgba(255, 255, 255, 0.3),
+        0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Judul */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Label */
+label {
+    color: #fff;
+    font-weight: 500;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #2b2b2b;
+    font-size: 15px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Tombol */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+
+    background: linear-gradient(135deg, #c94bff, #ff5ac9);
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 100, 200, 0.6);
+}
+
+/* Hasil */
+h3 {
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
